@@ -14,7 +14,7 @@
 - sqlite 2.8.17
 - httpd 2.4.43
 
-# Sample
+## Sample Code
 ```
 import pickle
 def open_mydata_pickle(filepath):
@@ -33,6 +33,10 @@ def open_mydata_pickle(filepath):
         print("--DEBUG length: {}" .format(len(dataset_pickle)))
     return dataset_pickle
 ```
+
+## SIBYL_dataset_Extractor
+- Require IDA Pro version 7.3 (Warning: python version is 2.XX)
+
 
 ## SIBYL: A Method for Detecting Similar Binary Functions Using Machine Learning
 Publication
