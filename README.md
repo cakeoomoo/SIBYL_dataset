@@ -1,18 +1,38 @@
 # SIBYL_dataset
 
 ## Format
-- Pickle format
+- Pickle format(List)
   - Pickle https://docs.python.org/3.8/library/pickle.html
+- Disassembler Instruction and CFG(control flow glaph)
 
 ## Dataset Contents
-Software Version
-gcc  7.5.0
-clang 6.0.0
-openssl 3.0.0a, 1.0.1f, 1.0.1u
-busybox 1.32.0
-gdb 9.2
-sqlite 2.8.17
-httpd 2.4.43
+- gcc  7.5.0
+- clang 6.0.0
+- openssl 3.0.0a, 1.0.1f, 1.0.1u
+- busybox 1.32.0open_mydata_pickle
+- gdb 9.2
+- sqlite 2.8.17
+- httpd 2.4.43
+
+# Sample
+```
+import pickle
+def open_mydata_pickle(filepath):
+    f = open(filepath, 'rb')
+    dataset_pickle = pickle.load(f)
+    f.close()
+    # Debug print.
+    for x in range(0, 3):
+        print("----")
+        print("--DEBUG: {}" .format(dataset_pickle[x][0]))
+        print("--DEBUG: {}" .format(dataset_pickle[x][1]))
+        print("--DEBUG: {}" .format(dataset_pickle[x][2]))
+        print("--DEBUG: {}" .format(dataset_pickle[x][3]))
+        print("--DEBUG: {}" .format(dataset_pickle[x][4]))
+        print("--DEBUG: {}" .format(dataset_pickle[x][5]))
+        print("--DEBUG length: {}" .format(len(dataset_pickle)))
+    return dataset_pickle
+```
 
 ## SIBYL: A Method for Detecting Similar Binary Functions Using Machine Learning
 Publication
